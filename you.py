@@ -6,11 +6,11 @@ import os
 
 # подключение к PostgreSQL
 db_connection = psycopg2.connect(
-        database = 'you_bot',
-        user = 'postgres',
-        password = '1354',
-        host = "/tmp/",
-        port = '5432')
+        database = '',
+        user = '',
+        password = '',
+        host = "",
+        port = '')
 db_cursor = db_connection.cursor()
 # создание таблицы
 db_cursor.execute('''
@@ -26,7 +26,7 @@ db_connection.commit()
 
 
 # Токен
-bot = telebot.TeleBot("6953065143:AAFGIhGf8w27JR6Elws0qKrPag9eOBObCCQ")
+bot = telebot.TeleBot("TOKEN")
 
 # привествие
 @bot.message_handler(commands=["start"])
